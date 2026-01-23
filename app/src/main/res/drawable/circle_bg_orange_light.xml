@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- For orange_light -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFE0B2" />
+    <corners android:radius="100dp" />
+    <size android:width="48dp" android:height="48dp" />
+</shape>
