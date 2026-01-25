@@ -32,6 +32,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -836,7 +837,6 @@
 
     <!-- Bottom Navigation -->
     <LinearLayout
-        android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:orientation="horizontal"
@@ -916,6 +916,7 @@
                 android:tint="@color/gray_dark" />
 
             <TextView
+                android:id="@+id/chat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Mazungumzo"

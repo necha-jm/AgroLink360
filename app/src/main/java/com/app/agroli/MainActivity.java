@@ -1,11 +1,8 @@
 package com.app.agroli;
 
-import static androidx.core.content.ContextCompat.startActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -41,34 +38,34 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Firebase
         mAuth = FirebaseAuth.getInstance();
 
+        // Views
         email = findViewById(R.id.Email);
         password = findViewById(R.id.password);
         signupBtn = findViewById(R.id.Signup);
         googleBtn = findViewById(R.id.Google);
 
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+        // Google Sign-In config
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(
+                GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
 
         googleSignInClient = GoogleSignIn.getClient(this, gso);
 
-        googleBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, Dashboard.class);
-                startActivity(i);
-            }
-        });
+        // ✅ CORRECT Google login
+        googleBtn.setOnClickListener(v -> signIn());
 
+        // Register button
         signupBtn.setOnClickListener(v ->
                 startActivity(new Intent(MainActivity.this, Register.class))
         );
     }
 
-    // 🔥 AUTO-REDIRECT IF ALREADY LOGGED IN
+    // ✅ AUTO LOGIN (CORRECT & RECOMMENDED)
     @Override
     protected void onStart() {
         super.onStart();
@@ -78,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // Start Google Sign-In
     private void signIn() {
         startActivityForResult(
                 googleSignInClient.getSignInIntent(),
@@ -112,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
         mAuth.signInWithCredential(credential)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
-                        goToDashboard(); //  DIRECT TO DASHBOARD
+                        goToDashboard();
                     } else {
                         Toast.makeText(this,
                                 "Authentication Failed",
@@ -123,6 +121,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void goToDashboard() {
         startActivity(new Intent(MainActivity.this, Dashboard.class));
-        finish(); //  prevent going back to login
+        finish(); // prevent back to login
     }
 }

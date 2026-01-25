@@ -1,3 +1,4 @@
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.google.gms.google.services)
@@ -17,6 +18,9 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        // Load API key from local.properties
+
+
     }
 
     buildTypes {
@@ -39,6 +43,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation(libs.firebase.inappmessaging.display)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
@@ -47,5 +52,10 @@ dependencies {
     implementation( "com.google.firebase:firebase-core:21.1.1")
     implementation("androidx.core:core-splashscreen:1.0.1")
     implementation("androidx.cardview:cardview:1.0.0")
-
+    implementation("com.google.ai.client.generativeai:generativeai:0.2.2")
+    implementation("androidx.lifecycle:lifecycle-viewmodel:2.6.2")
+    implementation("androidx.lifecycle:lifecycle-livedata:2.6.2")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.airbnb.android:lottie:6.1.0")
 }

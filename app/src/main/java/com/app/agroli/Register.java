@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 public class Register extends AppCompatActivity {
-    private TextView roleTitle;
     private EditText editTextName, editTextEmail, editTextPhone, editTextPassword;
     private Button buttonRegister;
 
@@ -26,7 +25,7 @@ public class Register extends AppCompatActivity {
         String selectedRole = getIntent().getStringExtra("SELECTED_ROLE");
 
         // Initialize views
-        roleTitle = findViewById(R.id.role_title);
+        TextView roleTitle = findViewById(R.id.role_title);
         editTextName = findViewById(R.id.edit_text_name);
         editTextEmail = findViewById(R.id.edit_text_email);
         editTextPhone = findViewById(R.id.edit_text_phone);
