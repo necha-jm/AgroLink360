@@ -68,15 +68,12 @@ public class SmsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
-
                 Uri smsUri = Uri.parse("smsto:" + to); // ✅ colon is REQUIRED
-                Intent intent = new Intent(Intent.ACTION_VIEW);
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
                 intent.setData(smsUri);
                 intent.putExtra("sms_body", message);
-                if(intent.resolveActivity(getPackageManager())!=  null) {
                     startActivity(intent);
-                }// no permission needed
+                // no permission needed
             }
         });
 
@@ -84,16 +81,11 @@ public class SmsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent call = new Intent(Intent.ACTION_CALL);
-                Uri callUri =  Uri.parse("tel:"+  to.replaceAll("[\\s\\-()]", ""));
+                Intent call = new Intent(Intent.ACTION_DIAL);
+                Uri callUri =  Uri.parse("tel:"+  to);
                 call.setData(callUri);
-                if(callgit.resolveActivity(getPackageManager())!=  null){
                    startActivity(call);
-                }else {
-                    Toast.makeText(SmsActivity.this,
-                            "No app to handle calls",
-                            Toast.LENGTH_SHORT).show();
-                }
+
             }});
 
 
