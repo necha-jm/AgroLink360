@@ -12,7 +12,6 @@
         android:id="@+id/textTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="12:04"
         android:textSize="14sp"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,14 +41,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hari,"
+                android:text="Hellow,"
                 android:textSize="18sp"
                 android:textColor="@color/gray_dark" />
 
             <TextView
+                android:id="@+id/tvName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="charlesnestory432"
                 android:textSize="22sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
@@ -196,6 +195,7 @@
 
         <!-- Ongeza Zao Button -->
         <androidx.cardview.widget.CardView
+            android:id="@+id/product"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_weight="1"

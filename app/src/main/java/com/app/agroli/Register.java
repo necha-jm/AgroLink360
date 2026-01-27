@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Register extends AppCompatActivity {
     private EditText editTextName, editTextEmail, editTextPhone, editTextPassword;
+    TextView  jina;
     private Button buttonRegister;
 
     @Override
@@ -31,6 +32,7 @@ public class Register extends AppCompatActivity {
         editTextPhone = findViewById(R.id.edit_text_phone);
         editTextPassword = findViewById(R.id.edit_text_password);
         buttonRegister = findViewById(R.id.button_register);
+
 
         // Set role-specific title and form
         if (selectedRole != null) {
@@ -113,20 +115,25 @@ public class Register extends AppCompatActivity {
     }
 
     private void navigateToDashboard(String role) {
+
         Intent intent;
+
         switch (role) {
             case "mkulima":
-                intent = new Intent(this, MainDashboard.class);
-                break;
             case "mfanyabiashara":
-                intent = new Intent(this, MainDashboard.class);
-                break;
             case "mtaalamu":
                 intent = new Intent(this, MainDashboard.class);
                 break;
             default:
                 intent = new Intent(this, MainActivity.class);
         }
+
+        // ✅ PASS DATA
+        intent.putExtra("NAME", editTextName.getText().toString().trim());
+        intent.putExtra("EMAIL", editTextEmail.getText().toString().trim());
+        intent.putExtra("PHONE", editTextPhone.getText().toString().trim());
+        intent.putExtra("ROLE", role);
+
         startActivity(intent);
         finish();
     }
