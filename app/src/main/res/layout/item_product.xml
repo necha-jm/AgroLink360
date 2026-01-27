@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="@drawable/card_bg"
+    android:layout_marginBottom="12dp"
+    android:gravity="center_vertical">
+
+    <!-- Crop Icon -->
+    <ImageView
+        android:id="@+id/imgCrop"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_maize"
+        android:contentDescription="Crop"
+        android:layout_marginEnd="12dp" />
+
+    <!-- Product Info -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Product Name -->
+        <TextView
+            android:id="@+id/tvCropName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Maize"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <!-- Category -->
+        <TextView
+            android:id="@+id/tvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category: Grains"
+            android:textSize="13sp"
+            android:textColor="@color/gray_dark"
+            android:layout_marginTop="2dp" />
+
+        <!-- Quantity + Price -->
+        <TextView
+            android:id="@+id/tvQtyPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="500 kg · TZS 1,200/kg"
+            android:textSize="13sp"
+            android:textColor="@color/gray_dark"
+            android:layout_marginTop="2dp" />
+
+        <!-- Location -->
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📍 Morogoro"
+            android:textSize="13sp"
+            android:textColor="@color/green_dark"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

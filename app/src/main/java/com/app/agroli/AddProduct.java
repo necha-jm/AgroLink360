@@ -17,12 +17,15 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.datatransport.BuildConfig;
+import com.google.android.material.textfield.TextInputEditText;
 
 import java.io.File;
 
 public class AddProduct extends AppCompatActivity {
 
-    Button btnUploadImage;
+    Button btnUploadImage,btnAddProduct;
+
+    TextInputEditText etLocation, etPrice, etQuantity,etCategory,etProductname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,39 @@ public class AddProduct extends AppCompatActivity {
         });
 
         btnUploadImage = findViewById(R.id.btnUploadImage);
+        etLocation = findViewById(R.id.etLocation);
+        etPrice = findViewById(R.id.etPrice);
+        etQuantity = findViewById(R.id.etQuantity);
+        etCategory = findViewById(R.id.etCategory);
+        etProductname = findViewById(R.id.etProductName);
+        btnAddProduct = findViewById(R.id.btnAddProduct);
+
+        btnAddProduct.setOnClickListener(v -> {
+            String price = etPrice.getText().toString().trim();
+            String quantity = etQuantity.getText().toString().trim();
+            String category = etCategory.getText().toString().trim();
+            String productName = etProductname.getText().toString().trim();
+            String location = etLocation.getText().toString().trim();
+
+            if (price.isEmpty() || quantity.isEmpty() || productName.isEmpty()) {
+                Toast.makeText(this, "Please fill all required fields", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            Product product = new Product(productName, category, Double.parseDouble(price),
+                    Double.parseDouble(quantity), location);
+
+            // Save product to static list
+            ProductStore.productList.add(product);
+
+            // Open MainDashboard
+            startActivity(new Intent(AddProduct.this, MainDashboard.class));
+            finish();
+        });
+
+
+
+
 
         btnUploadImage.setOnClickListener(new View.OnClickListener() {
             @Override

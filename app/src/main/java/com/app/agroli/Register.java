@@ -135,6 +135,7 @@ public class Register extends AppCompatActivity {
         intent.putExtra("ROLE", role);
 
         startActivity(intent);
+
         finish();
     }
 }
