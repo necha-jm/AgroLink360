@@ -19,7 +19,8 @@ import java.util.ArrayList;
 
 public class MainDashboard extends AppCompatActivity {
 
-    TextView message, tvName;
+    TextView  tvName;
+    ImageView message;
     CardView AddProduct;
 
     RecyclerView recyclerView;
