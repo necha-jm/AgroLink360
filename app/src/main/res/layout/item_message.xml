@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="4dp"
+    android:paddingHorizontal="8dp">
+
+    <!-- SENDER MESSAGE BUBBLE -->
+    <LinearLayout
+        android:id="@+id/layoutSenderMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_message_sender"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone">
+
+        <!-- Message Text -->
+        <TextView
+            android:id="@+id/tvSenderMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello! I have some questions about my maize crop"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:lineSpacingExtra="2dp" />
+
+        <!-- Message Time -->
+        <TextView
+            android:id="@+id/tvSenderTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:30 AM"
+            android:textSize="11sp"
+            android:textColor="@color/white_alpha"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="end" />
+
+        <!-- Sent Status -->
+        <ImageView
+            android:id="@+id/ivSentStatus"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/ic_double"
+            android:tint="@color/white"
+            android:layout_marginTop="4dp"
+            android:layout_gravity="end" />
+
+    </LinearLayout>
+
+    <!-- RECEIVER MESSAGE BUBBLE -->
+    <LinearLayout
+        android:id="@+id/layoutReceiverMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_message_receiver"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone">
+
+        <!-- Profile Image -->
+        <ImageView
+            android:id="@+id/ivReceiverAvatar"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_female_expert"
+            android:background="@drawable/bg_circle_green"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Message Text -->
+        <TextView
+            android:id="@+id/tvReceiverMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sure! What seems to be the problem with your maize crop?"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:lineSpacingExtra="2dp" />
+
+        <!-- Message Time -->
+        <TextView
+            android:id="@+id/tvReceiverTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:32 AM"
+            android:textSize="11sp"
+            android:textColor="@color/gray_dark"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+
+    <!-- IMAGE MESSAGE BUBBLE -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardImageMessage"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Image -->
+            <ImageView
+                android:id="@+id/ivMessageImage"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_maize"
+                android:contentDescription="Crop image" />
+
+            <!-- Image Overlay -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_image_overlay" />
+
+            <!-- Image Caption -->
+            <TextView
+                android:id="@+id/tvImageCaption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My maize field"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="12dp" />
+
+            <!-- Play Button for Video -->
+            <ImageView
+                android:id="@+id/ivPlayButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_education"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                app:tint="@color/white" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

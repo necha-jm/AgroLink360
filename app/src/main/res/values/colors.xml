@@ -27,6 +27,9 @@
     <color name="light_green">#C8E6C9</color>
     <color name="secondary_text">#666666</color>
     <color name="version_text">#999999</color>
+    <color name="gray_light">#F5F5F5</color>
+    <color name="white_alpha">#B3FFFFFF</color>
+
 
 
 </resources>

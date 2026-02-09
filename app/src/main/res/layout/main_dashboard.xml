@@ -111,7 +111,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerProducts"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="100dp"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -263,7 +263,7 @@
                 <TextView
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:text="?"
+                    android:text="swali"
                     android:textSize="32sp"
                     android:textStyle="bold"
                     android:textColor="@color/blue_dark"
@@ -305,9 +305,9 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:src="@drawable/ic_expert"
-                    android:tint="@color/orange_dark"
                     android:background="@drawable/circle_bg_orange_light"
-                    android:scaleType="center" />
+                    android:scaleType="center"
+                    app:tint="@color/orange_dark" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -335,19 +335,17 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <!-- Scrollable Content Area -->
-    <!-- Scrollable Content Area -->
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="72dp"
         app:layout_constraintTop_toBottomOf="@id/textConversations"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintBottom_toTopOf="@id/bottomNav"
-        app:layout_constraintEnd_toEndOf="parent">
+        android:clipToPadding="false">
 
-        <LinearLayout
+
+    <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -521,8 +519,8 @@
                                     android:layout_width="16dp"
                                     android:layout_height="16dp"
                                     android:src="@drawable/ic_weight"
-                                    android:tint="@color/gray_dark"
-                                    android:layout_marginEnd="8dp" />
+                                    android:layout_marginEnd="8dp"
+                                    app:tint="@color/gray_dark" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -542,8 +540,8 @@
                                     android:layout_width="16dp"
                                     android:layout_height="16dp"
                                     android:src="@drawable/ic_location"
-                                    android:tint="@color/gray_dark"
-                                    android:layout_marginEnd="8dp" />
+                                    android:layout_marginEnd="8dp"
+                                    app:tint="@color/gray_dark" />
 
                                 <TextView
                                     android:id="@+id/loc"
@@ -563,8 +561,8 @@
                                     android:layout_width="16dp"
                                     android:layout_height="16dp"
                                     android:src="@drawable/ic_calendar"
-                                    android:tint="@color/gray_dark"
-                                    android:layout_marginEnd="8dp" />
+                                    android:layout_marginEnd="8dp"
+                                    app:tint="@color/gray_dark" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -674,8 +672,8 @@
                                                 android:layout_width="14dp"
                                                 android:layout_height="14dp"
                                                 android:src="@drawable/ic_education"
-                                                android:tint="@color/gray_dark"
-                                                android:layout_marginEnd="4dp" />
+                                                android:layout_marginEnd="4dp"
+                                                app:tint="@color/gray_dark" />
 
                                             <TextView
                                                 android:layout_width="wrap_content"
@@ -711,8 +709,8 @@
                                         android:layout_width="14dp"
                                         android:layout_height="14dp"
                                         android:src="@drawable/ic_experience"
-                                        android:tint="@color/gray_dark"
-                                        android:layout_marginEnd="6dp" />
+                                        android:layout_marginEnd="6dp"
+                                        app:tint="@color/gray_dark" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
@@ -795,8 +793,8 @@
                                                 android:layout_width="14dp"
                                                 android:layout_height="14dp"
                                                 android:src="@drawable/ic_education"
-                                                android:tint="@color/gray_dark"
-                                                android:layout_marginEnd="4dp" />
+                                                android:layout_marginEnd="4dp"
+                                                app:tint="@color/gray_dark" />
 
                                             <TextView
                                                 android:layout_width="wrap_content"
@@ -832,8 +830,8 @@
                                         android:layout_width="14dp"
                                         android:layout_height="14dp"
                                         android:src="@drawable/ic_experience"
-                                        android:tint="@color/gray_dark"
-                                        android:layout_marginEnd="6dp" />
+                                        android:layout_marginEnd="6dp"
+                                        app:tint="@color/gray_dark" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
@@ -866,14 +864,14 @@
     </ScrollView>
 
     <!-- Bottom Navigation -->
-    <!-- Bottom Navigation -->
     <LinearLayout
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@color/white"
         android:elevation="12dp"
+        android:paddingBottom="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -882,16 +880,15 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/gray_light" />
+            android:background="@color/gray_light"/>
 
-        <!-- Nav Items -->
+        <!-- Navigation Items Row -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="56dp"
             android:orientation="horizontal">
 
-            <!-- TEMPLATE ITEM (use same for all) -->
+            <!-- HOME -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -906,21 +903,18 @@
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     android:src="@drawable/ic_home"
-                    android:tint="@color/green_dark" />
+                    app:tint="@color/green_dark" />
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Nyumbani"
                     android:textSize="11sp"
                     android:textColor="@color/green_dark"
-                    android:gravity="center"
-                    android:layout_marginTop="4dp"
-                    android:maxLines="1" />
+                    android:layout_marginTop="4dp" />
             </LinearLayout>
 
-            <!-- Repeat same structure for other items -->
-            <!-- Soko -->
+            <!-- SOKO -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -935,19 +929,18 @@
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     android:src="@drawable/ic_market"
-                    android:tint="@color/gray_dark" />
+                    app:tint="@color/gray_dark" />
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Soko"
                     android:textSize="11sp"
                     android:textColor="@color/gray_dark"
-                    android:gravity="center"
                     android:layout_marginTop="4dp" />
             </LinearLayout>
 
-            <!-- Mazungumzo -->
+            <!-- MAZUNGUMZO -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -963,19 +956,18 @@
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     android:src="@drawable/ic_chat"
-                    android:tint="@color/gray_dark" />
+                    app:tint="@color/gray_dark" />
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Mazungumzo"
                     android:textSize="11sp"
                     android:textColor="@color/gray_dark"
-                    android:gravity="center"
                     android:layout_marginTop="4dp" />
             </LinearLayout>
 
-            <!-- Msaidizi -->
+            <!-- MSAIDIZI -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -990,19 +982,18 @@
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     android:src="@drawable/ic_ai"
-                    android:tint="@color/gray_dark" />
+                    app:tint="@color/gray_dark" />
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Msaidizi"
                     android:textSize="11sp"
                     android:textColor="@color/gray_dark"
-                    android:gravity="center"
                     android:layout_marginTop="4dp" />
             </LinearLayout>
 
-            <!-- Wasifu -->
+            <!-- WASIFU -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -1017,19 +1008,19 @@
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     android:src="@drawable/ic_profile"
-                    android:tint="@color/gray_dark" />
+                    app:tint="@color/gray_dark" />
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Wasifu"
                     android:textSize="11sp"
                     android:textColor="@color/gray_dark"
-                    android:gravity="center"
                     android:layout_marginTop="4dp" />
             </LinearLayout>
 
         </LinearLayout>
+
     </LinearLayout>
 
 
