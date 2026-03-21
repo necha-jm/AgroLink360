@@ -11,8 +11,7 @@
     <string name="password1">Password</string>
     <string name="sign_in1">Sign In</string>
     <string name="log_out">log out</string>
-    <string name="default_web_client_id">
-    12445191648-h0n6tr8krnvnuicrdmkmek5avbd31ivk.apps.googleusercontent.com
-    </string>
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="default_web_client_id">1:705055691889:android:b936fe920b2073371f37d0</string>
+
 </resources>

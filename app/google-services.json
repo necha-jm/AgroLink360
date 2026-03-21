@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "705055691889",
+    "firebase_url": "https://agrolink-70e8b-default-rtdb.firebaseio.com",
     "project_id": "agrolink-70e8b",
     "storage_bucket": "agrolink-70e8b.firebasestorage.app"
   },
@@ -12,7 +13,20 @@
           "package_name": "com.app.agroli"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "705055691889-rphm6bjckgsuokpjalp9731vrr0u8fqj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.agroli",
+            "certificate_hash": "4c2ed738bb90b9d21b348a4486387d9921c65174"
+          }
+        },
+        {
+          "client_id": "705055691889-mdkvrb9fod15fnktps9d5jn0isvhaicj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyD95TlG56fEZKtB6hDLAigIsMl_6-xjsew"
@@ -20,7 +34,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "705055691889-mdkvrb9fod15fnktps9d5jn0isvhaicj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
