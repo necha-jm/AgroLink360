@@ -12,7 +12,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
@@ -121,13 +120,13 @@ public class MainActivity extends AppCompatActivity {
         // Sign In button
         signInButton.setOnClickListener(v -> {
             animateButton(v);
-            new Handler().postDelayed(() -> signInWithEmailAndPassword(), 200);
+            new Handler().postDelayed(this::signInWithEmailAndPassword, 200);
         });
 
         // Guest button
         guestButton.setOnClickListener(v -> {
             animateButton(v);
-            new Handler().postDelayed(() -> signInAsGuest(), 200);
+            new Handler().postDelayed(this::signInAsGuest, 200);
         });
 
         // Sign Up button
@@ -359,4 +358,6 @@ public class MainActivity extends AppCompatActivity {
             goToDashboard();
         }
     }
-}
+
+
+    }
