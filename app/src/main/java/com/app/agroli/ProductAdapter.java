@@ -31,10 +31,10 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
         Product product = productList.get(position);
 
-        holder.tvName.setText(product.name);
-        holder.tvCategory.setText("Category: " + product.category);
-        holder.tvQtyPrice.setText(product.quantity + " kg · TZS " + product.price + "/kg");
-        holder.tvLocation.setText("📍 " + product.location);
+        holder.tvName.setText(product.getProductName());
+        holder.tvCategory.setText("Category: " + product.getCategory());
+        holder.tvQtyPrice.setText(product.getQuantity() + " kg · TZS " + product.getPrice() + "/kg");
+        holder.tvLocation.setText(R.drawable.ic_location  + product.getLocation());
     }
 
     @Override

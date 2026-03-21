@@ -20,9 +20,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AgroLi">
         <activity
-            android:name=".ChatActivity"
+            android:name=".ProductActivity"
             android:exported="false" />
-        <!-- SPLASH SCREEN (LAUNCHER) -->
+        <activity
+            android:name=".ChatActivity"
+            android:exported="false" /> <!-- SPLASH SCREEN (LAUNCHER) -->
         <activity
             android:name=".SplashActivity"
             android:exported="true"

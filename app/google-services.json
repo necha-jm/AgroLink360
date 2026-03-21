@@ -1,44 +1,26 @@
 {
   "project_info": {
-    "project_number": "12445191648",
-    "project_id": "agrolink360-7aa49",
-    "storage_bucket": "agrolink360-7aa49.firebasestorage.app"
+    "project_number": "705055691889",
+    "project_id": "agrolink-70e8b",
+    "storage_bucket": "agrolink-70e8b.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:12445191648:android:7408026fe4ba0afe8d6f85",
+        "mobilesdk_app_id": "1:705055691889:android:b936fe920b2073371f37d0",
         "android_client_info": {
           "package_name": "com.app.agroli"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "12445191648-of83o0vo0d0nlg0vljrir1o2d5r3cp3a.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.app.agroli",
-            "certificate_hash": "a399205eab4c7ed15bdbbd390a4f01fb98b81a10"
-          }
-        },
-        {
-          "client_id": "12445191648-h0n6tr8krnvnuicrdmkmek5avbd31ivk.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAYpx_huAgZpA2HW5N8RLJZI5hK919Q-98"
+          "current_key": "AIzaSyD95TlG56fEZKtB6hDLAigIsMl_6-xjsew"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "12445191648-h0n6tr8krnvnuicrdmkmek5avbd31ivk.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

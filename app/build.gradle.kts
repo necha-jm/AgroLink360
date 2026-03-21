@@ -6,9 +6,9 @@ plugins {
 
 android {
     namespace = "com.app.agroli"
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk = 36  // Add this line
+
+
 
     defaultConfig {
         applicationId = "com.app.agroli"
@@ -44,12 +44,11 @@ dependencies {
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     implementation(libs.firebase.inappmessaging.display)
+    implementation(libs.firebase.storage)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    implementation("com.google.firebase:firebase-auth:22.3.0")
     implementation("com.google.android.gms:play-services-auth:21.0.0")
-    implementation( "com.google.firebase:firebase-core:21.1.1")
     implementation("androidx.core:core-splashscreen:1.0.1")
     implementation("androidx.cardview:cardview:1.0.0")
     implementation("com.google.ai.client.generativeai:generativeai:0.2.2")
@@ -58,4 +57,11 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.airbnb.android:lottie:6.1.0")
+    // Firebase
+    // Firebase BoM and dependencies
+    implementation(platform("com.google.firebase:firebase-bom:33.10.0"))
+    implementation("com.google.firebase:firebase-database")
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-storage")
+
 }
