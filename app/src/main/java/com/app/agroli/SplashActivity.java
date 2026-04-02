@@ -81,7 +81,7 @@ public class SplashActivity extends AppCompatActivity implements NetworkReceiver
 
         hasNavigated = true;
 
-        Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+        Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
         startActivity(intent);
         finish();
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
@@ -94,13 +94,13 @@ public class SplashActivity extends AppCompatActivity implements NetworkReceiver
         hasInternet = isConnected;
 
         if (isConnected) {
-            Toast.makeText(this, "Internet Connected ✅", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Internet Connected ", Toast.LENGTH_SHORT).show();
             // Navigate immediately when internet becomes available
             new Handler(Looper.getMainLooper()).postDelayed(() -> {
                 navigateToMain();
             }, 500);
         } else {
-            Toast.makeText(this, "No Internet Connection ❌", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "No Internet Connection ", Toast.LENGTH_SHORT).show();
         }
     }
 

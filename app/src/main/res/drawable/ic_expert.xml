@@ -1,0 +1,17 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Graduation Cap -->
+    <path
+        android:fillColor="#FF9800"
+        android:pathData="M12,3L1,9l11,6 9,-4.9V17h2V9L12,3z"/>
+    <path
+        android:fillColor="#FF9800"
+        android:pathData="M5,13.2v4.5l7,3.8 7,-3.8v-4.5l-7,3.8 -7,-3.8z"/>
+    <!-- Magnifying Glass (Expertise) -->
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M15.5,14h-0.8l-0.3,-0.3c1,-1.1 1.6,-2.6 1.6,-4.2 0,-3.6 -2.9,-6.5 -6.5,-6.5S3,6 3,9.5s2.9,6.5 6.5,6.5c1.6,0 3.1,-0.6 4.2,-1.6l0.3,0.3v0.8l5,5 1.5,-1.5 -5,-5zM9.5,14c-2.5,0 -4.5,-2 -4.5,-4.5S7,5 9.5,5 14,7 14,9.5 12,14 9.5,14z"/>
+</vector>

@@ -109,7 +109,7 @@ public class Dashboard extends AppCompatActivity {
     }
 
     private void navigateToRegistration() {
-        Intent intent = new Intent(Dashboard.this, Register.class);
+        Intent intent = new Intent(Dashboard.this, RegisterActivity.class);
         intent.putExtra("SELECTED_ROLE", selectedRole);
         startActivity(intent);
         finish(); // Optional: close this activity
